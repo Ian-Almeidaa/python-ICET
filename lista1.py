@@ -20,20 +20,20 @@ def q3():
         print(f'\n{cont}°')
         cont+=1
 
-def q4():
-    num = int(input("Digite um número: "))
-    if num <= 1:
-        teste = False
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            print(f"{num} não é primo.")
-            break
-        print(f"{num} é primo.")
+def q4(numero):
+    if numero < 2:
+        return False   
+    for i in range(2, int(numero**0.5) + 1):
+        if numero % i == 0:
+            return False
+    
+    return True
+numero = int(input("Digite um número: "))
+if eh_primo(numero):
+    print(f"{numero} é um número primo.")
+else:
+    print(f"{numero} não é um número primo.")
 
-    """if teste == True:
-        print(f"{num} é primo.")
-    else:
-        print(f"{num} não é primo.")"""
 
 def q5():
     num1 = int(input('Digite um número: '))
@@ -45,6 +45,7 @@ def q5():
     else:
         print(f'ambos os valores ({num1},{num2}) são iguais')
     
-q4()
+def q6():
+    
 
 
